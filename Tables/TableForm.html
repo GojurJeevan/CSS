@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form In Table</title>
+  <style>
+    body {
+      background-color: #eef2f3;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    table {
+      background-color: #ffffff;
+      border-collapse: separate;
+      border-spacing: 0 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      width: 400px;
+      padding: 20px;
+    }
+
+    thead td {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    tbody td {
+      padding: 0px 15px;
+      
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 8px;
+    }
+
+    .submit-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #45a049;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 14px;
+      color: #007BFF;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <table>
+      <thead>
+        <tr>
+          <td colspan="2">Login Form</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: right;">
+            <a href="#">Forgot Password?</a>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <button type="submit" class="submit-btn">Login</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</body>
+</html>
