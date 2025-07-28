@@ -14,6 +14,7 @@
             border-radius: 10px;
             text-align: center;
             align-content: center;
+            margin-top: -40px;
         }
         .flexcontainer{
             display:flex;
@@ -77,6 +78,52 @@
             border: 2px solid black;
             margin-bottom: 20px;
         }
+        .Cardcontainer{
+           width: 300px;
+           height: 100px;
+           perspective: 1000px;
+        }
+        .front{
+            background-color: aqua;
+            color: brown;
+        }
+        .back{
+            background-color:darkcyan;
+            color:white;
+            transform: rotateY(180deg);
+        }
+        .flipcard{
+            height: 100%;
+            width: 100%;
+            transition: all 0.8s ease;
+            transform-style: preserve-3d;
+        }
+        .cardface{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            text-align: center;
+            align-content: center;
+        }
+        .Cardcontainer:hover .flipcard{
+            transform: rotateY(180deg);
+            background-color:black;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            position: relative;
+            bottom: 70px;
+        }
+        body{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
     </style>
 </head>
 <body>
@@ -91,6 +138,26 @@
     </header>
     <div class="image">
         <img src="https://marketplace.canva.com/EAFoEJMTGiI/1/0/1600w/canva-beige-aesthetic-new-arrival-fashion-banner-landscape-cNjAcBMeF9s.jpg" alt="" style="width: 1342px; height: 300px;">
+    </div>
+   <div class="main">
+    <div class="Cardcontainer">
+        <div class="flipcard">
+            <div class="cardface front">About</div>
+            <div class="cardface back">Details</div>
+        </div>
+    </div>
+    <div class="Cardcontainer">
+        <div class="flipcard">
+            <div class="cardface front">Contact</div>
+            <div class="cardface back">Details</div>
+        </div>
+    </div>
+    <div class="Cardcontainer">
+        <div class="flipcard">
+            <div class="cardface front">Product</div>
+            <div class="cardface back">Details</div>
+        </div>
+    </div>
     </div>
     <div class="pos"><a href="#">Contact US</a></div>
     <div class="flexcontainer">
