@@ -1,0 +1,102 @@
+@media screen and (min-width:768px) and (max-width:1440px) {
+    header{
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid black;
+        background-color: bisque;
+        position: sticky;
+        top: 10px;
+    }
+    li a{
+        text-decoration: none;
+        color: red;
+    }
+    .linkcontainer{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10px;
+        list-style: none;
+    }
+    .banner{
+        display: flex;
+        margin-top: 20px;
+        justify-content: center;
+        background-color: burlywood;
+        align-items: center;
+        border-radius: 20px;
+        gap: 60px;
+    }
+    .item{
+        height: 200px;
+        width: 200px;
+        background-color:beige;
+        color: black;
+        text-align: center;
+        align-content: center;
+        margin: 20px;
+        border-radius: 15px;
+    }
+    @keyframes items {
+        0%{
+            transform: translateY(0px);
+        }
+        50%{
+            transform: translateY(20px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+    }
+    .itemcontainer{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-items: center;
+    }
+    .item:hover{
+        animation: items 3s ease infinite normal;
+        cursor: pointer;
+        background-color: aqua;
+    }
+    footer{
+        text-align: center;
+        background-color:antiquewhite;
+    }
+}
+@media screen and (max-width:767px){
+    header{
+        border: 2px solid black;
+        background-color: bisque;
+        text-align: center;
+    }
+    .linkcontainer{
+        display: none;
+    }
+    .banner{
+        margin-top: 20px;
+        background-color: burlywood;
+        text-align:  center;
+        border-radius: 20px;
+        align-items: center;
+    }
+    .banner img{
+        display: none;
+    }
+    .item{
+        height: 200px;
+        width: 200px;
+        background-color:beige;
+        color: black;
+        text-align: center;
+        align-content: center;
+        margin: 10px;
+    }
+    .itemcontainer{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-items: center;
+    }
+    footer{
+        text-align: center;
+        background-color:antiquewhite;
+    }
+}
