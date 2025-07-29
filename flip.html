@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlipCard</title>
+    <style>
+        .front{
+            color: antiquewhite;
+            background-color:crimson;
+        }
+        .back{
+            color: aquamarine;
+            background-color:brown;
+            transform: rotateY(180deg);
+        }
+        .cardcontainer{
+            height: 100px;
+            width: 300px;
+            perspective: 1000px;
+        }
+        .facecard{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            text-align: center;
+            align-content: center;
+            border-radius: 15px;
+        }
+        .flipcard{
+            height: 100%;
+            width: 100%;
+            transition: all 0.8s ease;
+            transform-style: preserve-3d;
+        }
+        .cardcontainer:hover .flipcard{
+            transform: rotateY(180deg);
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            position: relative;
+            top: 200px;
+            
+        }
+        body{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1{
+            text-align: center;
+            position: relative;
+            top: 200px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>FlipCard</h1>
+    <div class="main">
+        <div class="cardcontainer">
+            <div class="flipcard">
+                <div class="facecard front">Front</div>
+                <div class="facecard back">Back</div>
+            </div>
+        </div>
+        <div class="cardcontainer">
+            <div class="flipcard">
+                <div class="facecard front">Front</div>
+                <div class="facecard back">Back</div>
+            </div>
+        </div>
+        <div class="cardcontainer">
+            <div class="flipcard">
+                <div class="facecard front">Front</div>
+                <div class="facecard back">Back</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
