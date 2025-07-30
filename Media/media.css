@@ -6,6 +6,7 @@
         background-color: bisque;
         position: sticky;
         top: 10px;
+        z-index: 999;
     }
     li a{
         text-decoration: none;
@@ -35,6 +36,8 @@
         align-content: center;
         margin: 30px;
         border-radius: 15px;
+        transition: all 1s ease;
+        transform-style: preserve-3d;
     }
     @keyframes items {
         0%{
@@ -61,6 +64,33 @@
         text-align: center;
         background-color:antiquewhite;
         margin-top: 20px;
+    }
+    .front{
+        background-color: chocolate;
+    }
+    .back{
+        background-color: crimson;
+        color: aliceblue;
+        transform: rotateY(180deg);
+    }
+    .facecard{
+        position: absolute;
+        backface-visibility: hidden;
+        text-align: center;
+        align-content: center;
+        border-radius: 15px;;
+    }
+    .items:hover .item{
+        transform: rotateY(180deg);
+    }
+    .items{
+        perspective: 1000px;
+    }
+    body{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
     }
 }
 @media screen and (max-width:767px){
@@ -118,5 +148,26 @@
         animation: items 3s ease infinite normal;
         cursor: pointer;
         background-color: aqua;
+    }
+    .front{
+        background-color: chocolate;
+    }
+    .back{
+        background-color: crimson;
+        color: aliceblue;
+        transform: rotateY(180deg);
+    }
+    .facecard{
+        position: absolute;
+        backface-visibility: hidden;
+        text-align: center;
+        align-content: center;
+        border-radius: 15px;;
+    }
+    .items:hover .item{
+        transform: rotateY(180deg);
+    }
+    .items{
+        perspective: 1000px;
     }
 }
