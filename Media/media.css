@@ -6,7 +6,7 @@
         background-color: bisque;
         position: sticky;
         top: 10px;
-        z-index: 999;
+        z-index: 9999;
     }
     li a{
         text-decoration: none;
@@ -34,7 +34,7 @@
         color: black;
         text-align: center;
         align-content: center;
-        margin: 30px;
+        margin: 20px;
         border-radius: 15px;
         transition: all 1s ease;
         transform-style: preserve-3d;
@@ -55,10 +55,9 @@
         grid-template-columns: repeat(3,1fr);
         justify-items: center;
     }
-    .item:hover{
-        animation: items 3s ease infinite normal;
+    .items:hover{
+        animation: items 2s ease infinite normal;
         cursor: pointer;
-        background-color: aqua;
     }
     footer{
         text-align: center;
@@ -66,7 +65,7 @@
         margin-top: 20px;
     }
     .front{
-        background-color: chocolate;
+        background-color:bisque;
     }
     .back{
         background-color: crimson;
@@ -84,6 +83,10 @@
         transform: rotateY(180deg);
     }
     .items{
+        height: 200px;
+        width: 200px;
+        gap: 20px;
+        margin: 20px;
         perspective: 1000px;
     }
     body{
@@ -100,6 +103,7 @@
         text-align: center;
         position: sticky;
         top: 10px;
+        z-index: 9999;
     }
     .linkcontainer{
         display: none;
@@ -144,10 +148,9 @@
             transform: translateY(0px);
         }
     }
-    .item:hover{
-        animation: items 3s ease infinite normal;
+    .items:hover{
+        animation: items 2s ease infinite normal;
         cursor: pointer;
-        background-color: aqua;
     }
     .front{
         background-color: chocolate;
