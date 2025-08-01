@@ -74,12 +74,14 @@
         transform: rotateY(180deg);
     }
     .facecard{
+        top: 0%;
         position: absolute;
         backface-visibility: hidden;
         text-align: center;
         align-content: center;
         border-radius: 15px;
         justify-items: center;
+
     }
     .items:hover .item{
         transform: rotateY(180deg);
